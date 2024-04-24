@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Web Application</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+<main>
+    <div class="container">
+        <form action="/cityTemp" method="post">
+            <input type="text" name="cityName" id="cityName" placeholder="Enter city name">
+            <input type="submit" name="submitBtn" id="submitBtn" value="search">
+        </form>
+            <h1 class="currentW">Current weather</h1>
+             <% if(locals.weatherInfo) { %>
+                <div class="currentWeatherInfo">
+                    <p class="city"><%= weatherInfo.name %></p>
+                    <div class="weatherIcon">
+                        <div class="weather-img">
+                            <img src="http://openweathermap.org/img/wn/<%= weatherInfo.weather[0].icon %>@4x.png" alt="weather-icon">
+                        </div>
+                        <div class="weatherBox">
+                            <div class="weatherTemperature">
+                                <h1 class="weatherTemp"><%= weatherInfo.main.temp %>° deg</h1>
+                            </div>
+                            <div class="weatherStatus">
+                                <p class="weatherStatus"><%= weatherInfo.weather[0].main %></p> 
+                            </div>
+                        </div>                       
+                    </div>                    
+                </div>
+            <div class="weatherDetails">
+                <table>
+                    <tbody>
+                        <tr class="weather-data">
+                            <td>Wind</td>
+                            <td>Humidity</td>
+                            <td>Pressure</td>
+                            <td>Min temp</td>
+                            <td>Max temp</td>
+                        </tr>
+                        <tr class="weather-data-info">
+                            <td><%= weatherInfo.wind.speed %> m/s</td>
+                            <td><%= weatherInfo.main.humidity %>%</td>
+                            <td><%= weatherInfo.main.pressure %> mmHg</td>
+                            <td><%= weatherInfo.main.temp_min %></td>
+                            <td><%= weatherInfo.main.temp_max %></td>
+                        </tr>
+                   </tbody>
+                </table>
+            </div>
+            <% } %>          
+    </div>
+</main>
+    <footer>
+       <p>abc@Company</p>
+    </footer>
+</body>
+</html>
+
+  

@@ -1,0 +1,92 @@
+body{
+    background: url("https://img.freepik.com/free-vector/sky-background-pastel-paper-cut-design-vector_53876-144660.jpg?w=996&t=st=1713933118~exp=1713933718~hmac=21740ed240576db954d8cdb442efffa63c875b93b15827350611f6232ffb652b");
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* from margin to create gap between weather dashboard */
+form{
+    margin-bottom: 2rem;
+}
+form input{
+    text-align: center;
+    height: 2rem;
+    background-color: transparent;
+    color:aliceblue;
+    font-size: 16px;
+    border: 1px solid rgb(103, 95, 95);
+}
+form #submitBtn{
+    color: gray;
+    height: 2.2rem;
+}
+form #submitBtn:hover{
+    transition: 0.5s;
+    letter-spacing: 1.3px;
+}
+
+form input, button{
+    border-radius: 5px;
+}
+/* styling the container  */
+.container{
+    background: rgba(68, 65, 65, 0.334);
+    border-radius: 10px;
+    margin-top: 2rem;
+    padding: 1.2rem;
+}
+.city{
+    color: aliceblue;
+    font-size: 18px;
+}
+.currentW{
+    color:aliceblue;
+    font-weight: lighter;
+}
+.weatherIcon{
+    display: flex;
+    margin-right: 2rem;
+}
+
+.weatherBox{
+    margin-top: 3.5rem;
+}
+
+.weatherStatus{
+    font-size: 18px;
+    color: aliceblue;
+}
+.weatherTemp{
+    display: inline;
+    color: aliceblue;
+    margin-top: 31px;
+}
+.weatherDetails{
+    line-height: 2;
+}
+.weather-data , .weather-data-info{
+    color:aliceblue;
+}
+tr td{
+    text-align: center;
+    padding: 10px;
+}
+/* footer section */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
