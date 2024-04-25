@@ -46,6 +46,7 @@ form input, button{
     margin-top: 2rem;
     padding: 1.2rem;
 }
+/* here city means name of the city */
 .city{
     color: aliceblue;
     font-size: 18px;
@@ -54,6 +55,7 @@ form input, button{
     color:aliceblue;
     font-weight: lighter;
 }
+/* I used openWeatherMap api weather icon (actually weather img) to show weather  */
 .weatherIcon{
     display: flex;
     margin-right: 2rem;
